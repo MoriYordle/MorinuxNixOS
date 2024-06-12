@@ -1,13 +1,14 @@
 # Configuration of Morinux for NixOS
 
-# Cloning the repository to pull configuration.nix
-1- git clone [this repo]
+![Welcome to Morinux](https://github.com/MoriYordle/MorinuxNixOS/blob/main/logo.png)
 
-# Copy and paste the new configuration
-2- sudo cp ~/MorinuxNixOS/configuration.nix /etc/nixos/
-
-# Update Nix channel for up to date packages
-3- sudo nixos-channel --update
-
-# Build on system the new configuration
-4- sudo nixos-rebuild switch
+- Cloning and copying configuration.nix
+```
+git clone https://github.com/MoriYordle/MorinuxNixOS.git
+sudo cp ~/MorinuxNixOS/configuration.nix /etc/nixos/
+```
+- Update Nix channel and build the new configuration
+```
+sudo nixos-channel --update
+sudo nixos-rebuild switch
+```
