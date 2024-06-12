@@ -1,6 +1,6 @@
 # Configuration of Morinux for NixOS
 
-![Welcome to Morinux](https://github.com/MoriYordle/MorinuxNixOS/blob/main/logo.png)
+![Welcome to Morinux](https://github.com/MoriYordle/MorinuxNixOS/blob/main/Resources/logo.png)
 
 - Cloning and copying configuration.nix
 ```
