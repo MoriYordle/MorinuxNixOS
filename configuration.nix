@@ -112,7 +112,6 @@
     pkgs.element-desktop
     pkgs.ytdownloader
 #Games
-    pkgs.itch
     pkgs.prismlauncher
     pkgs.steam
 #Miscellaneous
