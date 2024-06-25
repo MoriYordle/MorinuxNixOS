@@ -118,6 +118,7 @@
 #Miscellaneous
     pkgs.alacritty
     pkgs.audacity
+    pkgs.bottles
     pkgs.btop
     pkgs.fastfetch
     pkgs.gimp
@@ -150,7 +151,7 @@
   # };
 
   # List services that you want to enable:
-  services.flatpak.enable = true;
+   services.flatpak.enable = true;
   # Enable the OpenSSH daemon.
    services.openssh.enable = true;
 
