@@ -9,6 +9,6 @@ sudo cp ~/MorinuxNixOS/configuration.nix /etc/nixos/
 ```
 - Update Nix channel and build the new configuration
 ```
-sudo nixos-channel --update
+sudo nix-channel --update
 sudo nixos-rebuild switch
 ```
