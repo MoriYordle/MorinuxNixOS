@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
     ];
 
-  # Bootloader.
+  # Bootloader. This will vary depending if you use grub or systemd-boot
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
@@ -26,7 +26,7 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "America/New_York";
+  time.timeZone = "America/Chicago";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -109,7 +109,6 @@
     pkgs.jetbrains.idea-community-bin
     pkgs.python3
     pkgs.conda
-    pkgs.bottles
     pkgs.github-desktop
     pkgs.libreoffice-qt6-still
     pkgs.material-design-icons
