@@ -102,22 +102,20 @@
 #KDE
     pkgs.kdePackages.kdeconnect-kde
     pkgs.kdePackages.kdenlive
-    pkgs.kdePackages.kmail
+    pkgs.kdePackages.krdp
     pkgs.krita
     pkgs.kdePackages.partitionmanager
 #Internet
-    pkgs.chatterino2
-    pkgs.dino
-    pkgs.discord
+    pkgs.vesktop
+    pkgs.ungoogled-chromium
     pkgs.element-desktop
-    pkgs.ytdownloader
+    pkgs.varia
 #Games
     pkgs.prismlauncher
     pkgs.steam
 #Miscellaneous
     pkgs.alacritty
     pkgs.audacity
-    pkgs.bottles
     pkgs.btop
     pkgs.fastfetch
     pkgs.gimp
@@ -125,12 +123,10 @@
     pkgs.godot_4
     pkgs.libreoffice-qt6-still
     pkgs.material-design-icons
-    pkgs.mpv
+    pkgs.clapper
     pkgs.noto-fonts-cjk-sans
     pkgs.noto-fonts-cjk-serif
     pkgs.noto-fonts-emoji-blob-bin
-    pkgs.wine64Packages.stable
-    pkgs.winetricks
 #Dependencies
     pkgs.dosfstools
     pkgs.git
