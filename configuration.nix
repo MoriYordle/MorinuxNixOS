@@ -11,11 +11,10 @@
     ];
 
   # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "morinux"; # Define your hostname.
+  networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -52,9 +51,9 @@
   services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us";
-    xkbVariant = "";
+    variant = "";
   };
 
   # Enable CUPS to print documents.
@@ -81,17 +80,17 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.moriko = {
+    shell = pkgs.zsh;
     isNormalUser = true;
     description = "Moriko";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       kdePackages.kate
-    #  thunderbird
     ];
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
+  # Change Shell to ZSH
+  programs.zsh.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -120,7 +119,6 @@
     pkgs.fastfetch
     pkgs.gimp
     pkgs.github-desktop
-    pkgs.godot_4
     pkgs.libreoffice-qt6-still
     pkgs.material-design-icons
     pkgs.clapper
@@ -129,12 +127,22 @@
     pkgs.noto-fonts-emoji-blob-bin
 #Dependencies
     pkgs.dosfstools
+    pkgs.exfat
+    pkgs.fastfetch
     pkgs.git
     pkgs.jdk8
     pkgs.linuxHeaders
+    pkgs.ntfs3g
+    pkgs.unrar
     pkgs.pwvucontrol
+    pkgs.unzip
     pkgs.wireplumber
+    pkgs.wget
     pkgs.zsh
+  ];
+
+   fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "Hermit" ]; })
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -162,6 +170,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.11"; # Did you read the comment?
 
 }
